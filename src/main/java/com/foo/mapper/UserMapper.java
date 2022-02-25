@@ -11,10 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserMapper {
 
     @Transactional
-    @Select("user/findByUsername.sql")
+    @Select("user/find-by-username.sql")
     User queryByName(@Param("username") String name);
 
     @Transactional
-    @Select("user/findUserByMultiQuery.sql")
+    @Select("user/find-user-by-multi-query.sql")
     User queryByForm(@Param("form") UserQueryForm form);
 }
