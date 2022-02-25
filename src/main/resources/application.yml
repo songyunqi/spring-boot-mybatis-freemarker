@@ -1,0 +1,19 @@
+#mysql
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/security?useSSL=true&serverTimezone=UTC&characterEncoding=utf8
+    username: yunqi
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  check_config_location: false
+  scripting-language-driver:
+    freemarker:
+      template-file:
+        base-dir: mappers
+      path-provider:
+        includes-package-path: false
+        seperate-directory-per-mapper: false
